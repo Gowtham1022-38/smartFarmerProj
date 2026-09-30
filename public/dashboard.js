@@ -445,6 +445,8 @@ if (chatBox && questionInput && sendButton) {
                 throw new Error("Invalid response from server.");
             }
 
+           console.log(data);
+
             if (!response.ok) {
                 throw new Error(data.error || "Server error");
             }
