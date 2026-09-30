@@ -1,6 +1,6 @@
 const { GoogleGenAI } = require("@google/genai");
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const MODEL = process.env.GEMINI_MODEL || "gemini-3.6-flash";
 
 module.exports = async function handler(req, res) {
     if (req.method !== "POST") {
