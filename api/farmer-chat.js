@@ -1,6 +1,6 @@
 const { GoogleGenAI } = require("@google/genai");
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-3.6-flash";
+const MODEL = process.env.GEMINI_MODEL || "gemini-3.1-flash-lite";
 
 module.exports = async function handler(req, res) {
     if (req.method !== "POST") {
@@ -83,6 +83,7 @@ USER QUESTION:
         });
 
         const answer = response.text;
+        console.log(answer)
         if (!answer || !answer.trim()) {
             throw new Error("Gemini returned an empty response.");
         }
