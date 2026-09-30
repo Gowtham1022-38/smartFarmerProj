@@ -90,10 +90,10 @@ USER QUESTION:
 
         return res.status(200).json({ success: true, reply: answer.trim() });
     } catch (error) {
-        console.error("Gemini Error:", error);
+        console.log("Gemini Error:", error);
         return res.status(500).json({
             success: false,
-            error: "Gemini API request failed. Please try again later."
+            error: "Server request failed. Please try again now."
         });
     }
 };
